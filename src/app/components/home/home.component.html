@@ -1,0 +1,152 @@
+<section id="carouselhome">
+  <div id="carousel" class="carousel slide bg-danger" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carousel" data-bs-slide-to="0" class="active" aria-current="true"
+        aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active" data-bs-interval="10000">
+        <div class="row">
+          <div class="col-12 col-md-8 d-flex justify-content-center">
+            <img src={{listrandomPokemons[0].sprites.front_default}} class="d-block w-75" alt="..." />
+          </div>
+          <div class="col-12 col-md-4  align-self-center">
+            <div class="card ms-5 mt-3 mb-5 me-5 pb-3">
+              <h1 class="display-1 text-center">{{listrandomPokemons[0].name}}</h1>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">
+                  {{listrandomPokemons[0].stats[0].stat.name}} : {{listrandomPokemons[0].stats[0].base_stat}}
+                  <div class="progress" role="progressbar" aria-valuenow="listrandomPokemons[0].stats[0].base_stat" aria-valuemin="0" aria-valuemax="100">
+                    <div class="progress-bar bg-success" [style.width.%]="listrandomPokemons[0].stats[0].base_stat"></div>
+                  </div>
+                </li>
+                <li class="list-group-item">
+                  {{listrandomPokemons[0].stats[1].stat.name}} : {{listrandomPokemons[0].stats[1].base_stat}}
+                  <div class="progress" role="progressbar" aria-valuenow="listrandomPokemons[0].stats[1].base_stat" aria-valuemin="0" aria-valuemax="100">
+                    <div class="progress-bar bg-danger" [style.width.%]="listrandomPokemons[0].stats[1].base_stat"></div>
+                  </div>
+                </li>
+                <li class="list-group-item">
+                  {{listrandomPokemons[0].stats[2].stat.name}} : {{listrandomPokemons[0].stats[2].base_stat}}
+                  <div class="progress" role="progressbar" aria-valuenow="listrandomPokemons[0].stats[2].base_stat" aria-valuemin="0" aria-valuemax="100">
+                    <div class="progress-bar bg-primary" [style.width.%]="listrandomPokemons[0].stats[2].base_stat"></div>
+                  </div>
+                </li>
+                <li class="list-group-item">
+                  {{listrandomPokemons[0].stats[3].stat.name}} : {{listrandomPokemons[0].stats[3].base_stat}}
+                  <div class="progress" role="progressbar" aria-valuenow="listrandomPokemons[0].stats[3].base_stat" aria-valuemin="0" aria-valuemax="100">
+                    <div class="progress-bar bg-secondary" [style.width.%]="listrandomPokemons[0].stats[3].base_stat"></div>
+                  </div>
+                </li>
+                <li class="list-group-item">
+                  {{listrandomPokemons[0].stats[4].stat.name}} : {{listrandomPokemons[0].stats[4].base_stat}}
+                  <div class="progress" role="progressbar" aria-valuenow="listrandomPokemons[0].stats[4].base_stat" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+                    <div class="progress-bar bg-warning" [style.width.%]="listrandomPokemons[0].stats[4].base_stat"></div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item" data-bs-interval="10000">
+        <div class="row">
+          <div class="col-12 col-md-8 d-flex justify-content-center">
+            <img src={{listrandomPokemons[1].sprites.front_default}} class="d-block w-75" alt="..." />
+          </div>
+          <div class="col-12 col-md-4  align-self-center">
+            <div class="card ms-5 mt-3 mb-5 me-5 pb-3">
+              <h1 class="display-1 text-center">{{listrandomPokemons[1].name}}</h1>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">
+                  {{listrandomPokemons[1].stats[0].stat.name}} : {{listrandomPokemons[1].stats[0].base_stat}}
+                  <div class="progress" role="progressbar" aria-valuenow="listrandomPokemons[1].stats[0].base_stat" aria-valuemin="0" aria-valuemax="100">
+                    <div class="progress-bar bg-success" [style.width.%]="listrandomPokemons[1].stats[0].base_stat"></div>
+                  </div>
+                </li>
+                <li class="list-group-item">
+                  {{listrandomPokemons[1].stats[1].stat.name}} : {{listrandomPokemons[1].stats[1].base_stat}}
+                  <div class="progress" role="progressbar" aria-valuenow="listrandomPokemons[1].stats[1].base_stat" aria-valuemin="0" aria-valuemax="100">
+                    <div class="progress-bar bg-danger" [style.width.%]="listrandomPokemons[1].stats[1].base_stat"></div>
+                  </div>
+                </li>
+                <li class="list-group-item">
+                  {{listrandomPokemons[1].stats[2].stat.name}} : : {{listrandomPokemons[1].stats[2].base_stat}}
+                  <div class="progress" role="progressbar" aria-valuenow="listrandomPokemons[1].stats[2].base_stat" aria-valuemin="0" aria-valuemax="100">
+                    <div class="progress-bar bg-primary" [style.width.%]="listrandomPokemons[1].stats[2].base_stat"></div>
+                  </div>
+                </li>
+                <li class="list-group-item">
+                  {{listrandomPokemons[1].stats[3].stat.name}} : {{listrandomPokemons[1].stats[3].base_stat}}
+                  <div class="progress" role="progressbar" aria-valuenow="listrandomPokemons[1].stats[3].base_stat" aria-valuemin="0" aria-valuemax="100">
+                    <div class="progress-bar bg-secondary" [style.width.%]="listrandomPokemons[1].stats[3].base_stat"></div>
+                  </div>
+                </li>
+                <li class="list-group-item">
+                  {{listrandomPokemons[1].stats[4].stat.name}} : {{listrandomPokemons[1].stats[4].base_stat}}
+                  <div class="progress" role="progressbar" aria-valuenow="listrandomPokemons[1].stats[4].base_stat" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+                    <div class="progress-bar bg-warning" [style.width.%]="listrandomPokemons[1].stats[4].base_stat"></div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item" data-bs-interval="10000">
+        <div class="row">
+          <div class="col-12 col-md-8 d-flex justify-content-center">
+            <img src={{listrandomPokemons[2].sprites.front_default}} class="d-block w-75" alt="..." />
+          </div>
+          <div class="col-12 col-md-4  align-self-center">
+            <div class="card ms-5 mt-3 mb-5 me-5 pb-3">
+              <h1 class="display-1 text-center">{{listrandomPokemons[2].name}}</h1>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">
+                  {{listrandomPokemons[2].stats[0].stat.name}} : {{listrandomPokemons[2].stats[0].base_stat}}
+                  <div class="progress" role="progressbar" aria-valuenow="listrandomPokemons[1].stats[0].base_stat" aria-valuemin="0" aria-valuemax="100">
+                    <div class="progress-bar bg-success" [style.width.%]="listrandomPokemons[1].stats[0].base_stat"></div>
+                  </div>
+                </li>
+                <li class="list-group-item">
+                  {{listrandomPokemons[2].stats[1].stat.name}} : {{listrandomPokemons[2].stats[1].base_stat}}
+                  <div class="progress" role="progressbar" aria-valuenow="listrandomPokemons[2].stats[1].base_stat" aria-valuemin="0" aria-valuemax="100">
+                    <div class="progress-bar bg-danger" [style.width.%]="listrandomPokemons[2].stats[1].base_stat"></div>
+                  </div>
+                </li>
+                <li class="list-group-item">
+                  {{listrandomPokemons[2].stats[2].stat.name}} : {{listrandomPokemons[2].stats[2].base_stat}}
+                  <div class="progress" role="progressbar" aria-valuenow="listrandomPokemons[2].stats[2].base_stat" aria-valuemin="0" aria-valuemax="100">
+                    <div class="progress-bar bg-primary" [style.width.%]="listrandomPokemons[2].stats[2].base_stat"></div>
+                  </div>
+                </li>
+                <li class="list-group-item">
+                  {{listrandomPokemons[2].stats[3].stat.name}} : {{listrandomPokemons[2].stats[3].base_stat}}
+                  <div class="progress" role="progressbar" aria-valuenow="listrandomPokemons[2].stats[3].base_stat" aria-valuemin="0" aria-valuemax="100">
+                    <div class="progress-bar bg-secondary" [style.width.%]="listrandomPokemons[2].stats[3].base_stat"></div>
+                  </div>
+                </li>
+                <li class="list-group-item">
+                  {{listrandomPokemons[2].stats[4].stat.name}} : {{listrandomPokemons[2].stats[4].base_stat}}
+                  <div class="progress" role="progressbar" aria-valuenow="listrandomPokemons[2].stats[4].base_stat" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+                    <div class="progress-bar bg-warning" [style.width.%]="listrandomPokemons[2].stats[4].base_stat"></div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+</section>

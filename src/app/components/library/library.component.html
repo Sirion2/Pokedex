@@ -1,0 +1,130 @@
+<div class="container text-center">
+    <h1 class="display-1 text-center mb-5">Pokemons</h1>    
+        <div class="row g-2 justify-content-md-center">            
+            <div class="col-sm-11 center-block" >
+                <input type="text" class="form-control form-control-lg" id="buscar" placeholder="Charizard" name="buscar" [(ngModel)]="buscar">
+            </div>
+            <div class="col-sm-1 center-block">
+                <i class="fa-solid fa-magnifying-glass fa-xl mt-4"></i><span>buscar</span>
+            </div>
+        </div>
+</div>
+<div class="container mt-5">
+    <div class="row mx-auto">
+        <div *ngFor="let pokemons of listPokemons | filtro: buscar let i = index" class="col">
+            <div class="card mb-5" style="width: 18rem;" data-bs-toggle="modal" href="#pokemonInfo" (click)="obtenerId(pokemons.id)">
+                <img src={{pokemons.sprites.front_default}} class="card-img-top" alt="...">
+                <div class="card-body bg-light">
+                    <h3 class="card-title text-center">{{pokemons.name}}</h3>
+                    <div class="row">
+                        <div class="col-mx-auto">
+                            <p class="card-text">{{pokemons.stats[0].stat.name}}:</p>
+                        </div>
+                        <div class="col-lg-10">
+                            <div class="progress" role="progressbar" aria-valuenow="pokemons.stats[0].base_stat" aria-valuemin="0" aria-valuemax="100">
+                                <div class="progress-bar bg-success" [style.width.%]="pokemons.stats[0].base_stat"></div>
+                            </div>
+                        </div>
+                        <div class="col-sm-2">
+                            <p class="card-text">{{pokemons.stats[0].base_stat}}</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-mx-auto">
+                            <p class="card-text">{{pokemons.stats[1].stat.name}}:</p>
+                        </div>
+                        <div class="col-lg-10">
+                            <div class="progress" role="progressbar" aria-valuenow="pokemons.stats[1].base_stat" aria-valuemin="0" aria-valuemax="100">
+                                <div class="progress-bar bg-danger" [style.width.%]="pokemons.stats[1].base_stat"></div>
+                            </div>
+                        </div>
+                        <div class="col-sm-2">
+                            <p class="card-text">{{pokemons.stats[1].base_stat}}</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-mx-auto">
+                            <p class="card-text">{{pokemons.stats[2].stat.name}}:</p>
+                        </div>
+                        <div class="col-lg-10">
+                            <div class="progress" role="progressbar" aria-valuenow="pokemons.stats[2].base_stat" aria-valuemin="0" aria-valuemax="100">
+                                <div class="progress-bar bg-primary" [style.width.%]="pokemons.stats[2].base_stat"></div>
+                            </div>
+                        </div>
+                        <div class="col-sm-2">
+                            <p class="card-text">{{pokemons.stats[2].base_stat}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="pokemonInfo" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="pokemonInfoLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header bg-danger">
+          <h4 class="modal-title fs-4 text-light" id="pokemonInfoLabel">Pokédex</h4>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <div class="contaienr">
+             <div class="row">
+                <div class="col">
+                    <img src={{listPokemons[id].sprites.front_default}} class="d-block w-100" alt="...">
+                </div>
+            </div>   
+            <div class="row">
+                <div class="col"><h3 class="display-3 text-center">{{listPokemons[id].name}}</h3></div>
+            </div>
+            <div class="row mt-3">
+                <div class="col"><p class="text fs-3">Summary:</p></div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <table class="table table-bordered text-center">
+                        <thead>
+                            <tr>
+                                <th scope="col">#</th>
+                                <th colspan="2">{{listPokemons[id].id}}</th>
+                            </tr>
+                        </thead>
+                    </table>
+
+                    <table class="table table-bordered text-center">
+                        <thead>
+                            <tr>
+                                <th scope="col">stats</th>
+                                <th scope="col">icon</th>
+                                <th scope="col">Points</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Height:</td>
+                                <td><i class="fa-solid fa-ruler fa-xl"></i></td>
+                                <td>{{listPokemons[id].height}}</td>
+                            </tr>
+                            <tr>
+                                <td>Weight:</td>
+                                <td><i class="fa-solid fa-weight-hanging fa-xl"></i></td>
+                                <td>{{listPokemons[id].weight}}</td>
+                            </tr>
+                            <tr>
+                                <td>Base XP:</td>
+                                <td><i class="fa-solid fa-lightbulb fa-xl"></i></td>
+                                <td>{{listPokemons[id].base_experience}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger btn-lg w-100" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
