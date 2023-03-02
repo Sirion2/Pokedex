@@ -1,27 +1,40 @@
-# Pokedex
+## Pokedex
+Aplicación para el consumo de la primera generación de pokemones.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.1.4.
 
-## Development server
+## Herramientas Utilizadas:
+- [x] Angular.
+- [x] TypeScript.
+- [x] Bootstrap.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Caracteristicas:
+La aplicación está desarrollada para su rapido uso mendiante una barra de busqueda el cual el usuario puede consultar su pokemon deseado.
 
-## Code scaffolding
+## Secciones:
+- NavBar
+- Home
+- Pokemons
+- Pokemon Stats
+- Footer
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-## Build
+## Interfaz de Usuario:
+La aplicación cuenta con los siguientes objetos:
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+1. **NavBar:**  Barra de navegacion para fácil acceso al usuario.
+    <img src="./capturas/Screenshot_8.png" alt="Loading Error" style="width:600px;"/>
 
-## Running unit tests
+2. **Home:**    Muestra uno random de la primera generacion y sus stats.
+    <img src="./capturas/Screenshot_2.png" alt="Loading Error" style="width:600px;"/>
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+3. **Pokemons:**    Muestra el catalogo de pokemones al usuario.
+    <img src="./capturas/Screenshot_1.png" alt="Loading Error" style="width:600px;"/>
 
-## Running end-to-end tests
+4. **Pokemons:**    Permite una busqueda fácil e intuitiva al usaurio mediante una barra de busqueda.
+    <img src="./capturas/Screenshot_6.png" alt="Loading Error" style="width:600px;"/>
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+5. **Pokemon Stats:**   Muestra los stats del pokemon seleccionado mediante una card.
+    <img src="./capturas/Screenshot_4.png" alt="Loading Error" style="width:600px;"/>
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+6. **Footer:**  Muestra el autor del proyecto.
+    <img src="./capturas/Screenshot_3.png" alt="Loading Error" style="width:600px;"/>
